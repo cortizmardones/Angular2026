@@ -1,0 +1,40 @@
+
+<p>Ejemplo componente usuario Angular 2026</p>
+
+
+<!-- Los cuatro bindings fundamentales -->
+
+<!--1.Interpolación-->
+<p>Nombre: {{ nombre }}</p>
+<p>Edad: {{ edad }}</p>
+
+<!--2.Property binding-->
+<img [src]="urlImagen" width="650" height="160" alt="Imagen de angular" />
+<br>
+
+<!--3.Event binding-->
+<button (click)="comprar()">ComprarConsoleLog</button>
+<br><br>
+
+<!--4.Two-way data binding-->
+<input [(ngModel)]="nombre">
+<br>
+
+<p>{{ sueldo() }}</p>
+<button (click)="aumentarSueldo()">Aumentar sueldo</button>
+<br>
+
+
+@if(edad > 18){
+    <p>Es mayor de edad</p>
+} @else {
+    <p>Es menor de edad</p>
+}
+
+<br>
+
+@for (producto of productos; track producto.id) {
+    <p>{{ producto.nombre }}</p>
+} @empty {
+    <p>No hay productos disponibles</p>
+}
