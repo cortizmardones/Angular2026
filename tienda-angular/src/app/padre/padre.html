@@ -1,9 +1,15 @@
-<p>padre works!</p>
-
-<p>Padre: {{ nombreUsuario }}</p>
-
-<button (click)="cambiarNombre()">Cambiar nombre</button>
-
-<app-hijo [nombre]="nombreUsuario" (comprar)="recibirCompra($event)"></app-hijo>
 
 <hr>
+
+<h3>Padre works!</h3>
+
+<p>Nombre padre: {{ nombrePadre }}</p>
+<p>Apellido padre: {{ apellidoPadre }}</p>
+
+<button (click)="cambiarNombre()">Cambiar nombre</button>
+<button (click)="resetNombre()">Reset nombre</button>
+
+<!-- El primer parametro es para enviar input al hijo -->
+<!-- El segundo es para que el hijo emita un evento y yo como padre lo escuche-->
+<app-hijo [nombre]="nombrePadre" (comprar)="recibirCompra($event)"></app-hijo>
+

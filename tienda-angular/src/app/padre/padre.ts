@@ -9,10 +9,17 @@ import { Hijo } from '../hijo/hijo';
 })
 export class Padre {
 
-  public nombreUsuario: string = 'Carlos';
+  public nombrePadre: string = 'Carlos';
+  public apellidoPadre: string = 'Ortiz';
 
   public cambiarNombre(): void {
-    this.nombreUsuario = 'Pedro';
+    this.nombrePadre = 'Pedro';
+    this.apellidoPadre = 'Gonzalez';
+  }
+
+  public resetNombre(): void {
+    this.nombrePadre = 'Carlos';
+    this.apellidoPadre = 'Ortiz';
   }
 
   public recibirCompra(producto: string): void {
