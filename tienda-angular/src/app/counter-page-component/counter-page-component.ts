@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -9,9 +9,11 @@ import { Component } from '@angular/core';
 export class CounterPageComponent {
 
   public counter: number = 10;
+  public counterSignal = signal(10);
 
   public aumentar(value: number): void {
     this.counter = this.counter + value;
+    this.counterSignal.update(valorActual => valorActual + value);
   }
 
   public decrementar(value: number): void {
@@ -19,10 +21,12 @@ export class CounterPageComponent {
       return;
     }
     this.counter = this.counter - value;
+    this.counterSignal.update(valorActual => valorActual - value);
   }
 
   public reset(): void {
     this.counter = 10;
+    this.counterSignal.set(10);
   }
 
 }
