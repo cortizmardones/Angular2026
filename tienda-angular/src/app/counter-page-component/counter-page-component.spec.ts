@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Usuarios } from './usuarios';
+import { CounterPageComponent } from './counter-page-component';
 
-describe('Usuarios', () => {
-  let component: Usuarios;
-  let fixture: ComponentFixture<Usuarios>;
+describe('CounterPageComponent', () => {
+  let component: CounterPageComponent;
+  let fixture: ComponentFixture<CounterPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Usuarios],
+      imports: [CounterPageComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Usuarios);
+    fixture = TestBed.createComponent(CounterPageComponent);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

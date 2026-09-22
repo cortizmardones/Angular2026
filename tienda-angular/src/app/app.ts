@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Usuarios } from './usuarios/usuarios';
 import { Padre } from './padre/padre';
-import { Navbar } from './navbar/navbar';
+import { CounterPageComponent } from './counter-page-component/counter-page-component';
+import { UsuariosComponent } from './usuario-component/usuarios-component';
 
 @Component({
-  imports: [RouterOutlet, Usuarios, Padre, Navbar],
+  imports: [RouterOutlet, UsuariosComponent, Padre, CounterPageComponent],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',

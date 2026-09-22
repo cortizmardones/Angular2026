@@ -1,13 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Padre } from '../padre/padre';
 
 @Component({
-  imports: [FormsModule],
+  imports: [FormsModule, Padre],
   selector: 'app-usuarios',
-  styleUrl: './usuarios.scss',
-  templateUrl: './usuarios.html',
+  styleUrl: './usuarios-component.scss',
+  templateUrl: './usuarios-component.html',
 })
-export class Usuarios {
+export class UsuariosComponent {
 
   public nombre: string = 'Carlos';
   public edad: number = 38;
