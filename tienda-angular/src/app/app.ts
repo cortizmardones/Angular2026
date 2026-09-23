@@ -1,11 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Padre } from './padre/padre';
-import { CounterPageComponent } from './counter-page-component/counter-page-component';
-import { UsuariosComponent } from './usuario-component/usuarios-component';
+import { Router, RouterOutlet } from '@angular/router';
+import { Navbar } from './components/shared/navbar/navbar';
 
 @Component({
-  imports: [RouterOutlet, UsuariosComponent, Padre, CounterPageComponent],
+  imports: [RouterOutlet, Navbar],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
@@ -13,5 +11,7 @@ import { UsuariosComponent } from './usuario-component/usuarios-component';
 export class App {
 
   protected readonly title = signal('tienda-angular');
+
+  constructor(public router: Router) {}
 
 }
